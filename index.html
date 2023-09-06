@@ -45,6 +45,18 @@
         <button class="primary-btn" id="startBtn">Jogar</button>
     </div>
 
+    <div class="scoreboard">
+        <span class="player-name">Jogador1</span>
+        <span id="player1-score" class="scoreboard-number">0</span>
+        <span class="divider">|</span>
+        <span id="player2-score" class="scoreboard-number">0</span>
+        <span class="player-name">Jogador2</span>
+    </div>
+
+    <div class="scoreboard-controls">
+        <button id="reset-scoreboard">Resetar Placar</button>
+    </div>
+
     <div class="container">
         <div class="board" id="board">
             <div class="block" data-cell></div>
@@ -71,6 +83,10 @@
         <div class="winner"></div>
         <button id="restartBtn" class="primary-btn">Recomeçar</button>
     </div>
+
+    <footer>
+        <p>&copy; Todos os direitos reservados - Eduardo Medeiros</p>
+    </footer>
 
     <script type="module" src="./index.js"></script>
 </body>

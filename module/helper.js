@@ -70,7 +70,14 @@ export function swapTurns(turn){
 export function endGame(draw, winEl, drawEl){
     if (!draw){
         winEl.classList.add("show");
-    }else{
+        if (GAME.winner.classList.contains(GAME.X_CLASS)) {
+            GAME.players['1Score'] += 1;
+            GAME.score1.textContent = GAME.players['1Score'];
+        } else {
+            GAME.players['2Score'] += 1;
+            GAME.score2.textContent = GAME.players['2Score'];
+        }
+    } else {
         drawEl.classList.add("show");
     }
 }
@@ -79,4 +86,11 @@ export function isDraw() {
     return [...GAME.blockElements].every(cell => {
         return cell.classList.contains(GAME.X_CLASS) || cell.classList.contains(GAME.Y_CLASS);
     });
+}
+
+export function resetScoreboard() {
+    GAME.players['1Score'] = 0;
+    GAME.players['2Score'] = 0;
+    GAME.score1.textContent = GAME.players['1Score'];
+    GAME.score2.textContent = GAME.players['2Score'];
 }

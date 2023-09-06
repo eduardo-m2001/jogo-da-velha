@@ -24,6 +24,64 @@ body {
     background: rgb(54, 54, 54);
 }
 
+.scoreboard {
+    position: absolute; /* adicionado */
+    top: 50px;          /* ajuste conforme necessário */
+    left: 50%;          /* centraliza horizontalmente */
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 2;         /* para garantir que fique em cima da div container */
+}
+
+.player-score {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+.player-name {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.divider {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.scoreboard-number {
+    font-size: 20px;
+    color: #34D399;
+}
+
+.scoreboard-controls {
+    position: absolute; /* adicionado */
+    top: 100px;          /* ajuste conforme necessário, posiciona abaixo do placar */
+    left: 50%;          /* centraliza horizontalmente */
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    display: flex;
+    justify-content: center;
+    z-index: 2;         /* para garantir que fique em cima da div container */
+}
+
+#reset-scoreboard {
+    background: var(--text-btn);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+#reset-scoreboard:hover {
+    background: var(--text-yellow);
+    color: var(--text-dark);
+}
+
 /* starting window */
 .container {
     height: 100vh;
@@ -70,7 +128,13 @@ body {
 }
 
 .start-game.hide {
+    z-index: 1; 
     display: none;
+}
+
+.start-game {
+    z-index: 3;  /* Garante que a tela de seleção esteja acima de todos os outros elementos */
+    /* o restante do código permanece o mesmo */
 }
 
 /* Main Game Board */
@@ -202,4 +266,17 @@ body {
 .block.male-2 {
     background-image: var(--male-2);
     background-size: cover;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(54, 54, 54, 0.8);  /* Semi-transparent background */
+    padding: 10px 0;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    z-index: 2;  /* Para garantir que apareça acima de outros elementos, mas abaixo da tela de seleção */
 }

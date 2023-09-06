@@ -1,14 +1,22 @@
 import { GAME } from "./module/variables.js";
 import { Profile, isDraw, endGame, setHoverEffect, markCell, swapTurns } from "./module/helper.js";
 import { checkWin, WIN_COMBINATIONS } from './module/win.js';
+import { resetScoreboard } from "./module/helper.js";
 
 GAME.startBtn.addEventListener("click", startGame);
 GAME.restartBtn.addEventListener("click", startGame);
 GAME.drawBtn.addEventListener("click", startGame);
+const resetButton = document.getElementById('reset-scoreboard');
+resetButton.addEventListener('click', resetScoreboard);
 
 Profile()
 
 function startGame() {
+    if (!GAME.players['1'] || !GAME.players['2']) {
+        alert("Selecione um personagem!");
+        return;  // Se algum dos jogadores não tiver selecionado um personagem, pare a execução aqui.
+    }
+
     GAME.X_CLASS = GAME.players['1'];
     GAME.Y_CLASS = GAME.players['2'];
 

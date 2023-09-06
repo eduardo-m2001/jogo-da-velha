@@ -14,7 +14,11 @@ export let GAME = {
     restartBtn : document.getElementById("restartBtn"),
     drawBtn : document.getElementById("drawBtn"),
     players: {
-        '1': null,  // armazenará a seleção do jogador 1
-        '2': null   // armazenará a seleção do jogador 2
-    }
+        '1': null,
+        '2': null,
+        '1Score': 0,
+        '2Score': 0
+    },
+    score1: document.getElementById('player1-score'),
+    score2: document.getElementById('player2-score'),
 }
