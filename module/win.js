@@ -1,4 +1,3 @@
-/** winning combinations of the game */
 export const WIN_COMBINATIONS = [
     [0, 1, 2], // horizontal
     [3, 4, 5],

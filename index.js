@@ -14,7 +14,7 @@ Profile()
 function startGame() {
     if (!GAME.players['1'] || !GAME.players['2']) {
         alert("Selecione um personagem!");
-        return;  // Se algum dos jogadores não tiver selecionado um personagem, pare a execução aqui.
+        return;  
     }
 
     GAME.X_CLASS = GAME.players['1'];
@@ -58,6 +58,6 @@ function handleClick(e) {
         endGame(true, GAME.winEl, GAME.drawEl);
     }
 
-    GAME.turn = !GAME.turn;  // Certifique-se de que a alternância esteja correta.
+    GAME.turn = !GAME.turn;
     setHoverEffect();
 }

@@ -25,14 +25,14 @@ body {
 }
 
 .scoreboard {
-    position: absolute; /* adicionado */
-    top: 50px;          /* ajuste conforme necessário */
-    left: 50%;          /* centraliza horizontalmente */
-    transform: translateX(-50%); /* centraliza horizontalmente */
+    position: absolute;
+    top: 50px;   
+    left: 50%;   
+    transform: translateX(-50%); 
     display: flex;
     justify-content: center;
     gap: 20px;
-    z-index: 2;         /* para garantir que fique em cima da div container */
+    z-index: 2;
 }
 
 .player-score {
@@ -56,13 +56,13 @@ body {
 }
 
 .scoreboard-controls {
-    position: absolute; /* adicionado */
-    top: 100px;          /* ajuste conforme necessário, posiciona abaixo do placar */
-    left: 50%;          /* centraliza horizontalmente */
-    transform: translateX(-50%); /* centraliza horizontalmente */
+    position: absolute;
+    top: 100px; 
+    left: 50%; 
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    z-index: 2;         /* para garantir que fique em cima da div container */
+    z-index: 2;  
 }
 
 #reset-scoreboard {
@@ -82,7 +82,6 @@ body {
     color: var(--text-dark);
 }
 
-/* starting window */
 .container {
     height: 100vh;
     display: flex;
@@ -133,11 +132,9 @@ body {
 }
 
 .start-game {
-    z-index: 3;  /* Garante que a tela de seleção esteja acima de todos os outros elementos */
-    /* o restante do código permanece o mesmo */
+    z-index: 3; 
 }
 
-/* Main Game Board */
 #board {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -161,12 +158,10 @@ body {
     background-size: cover;
 }
 
-/* Hover Styles */
 .block:not(.player-1):not(.player-2):hover {
     opacity: 0.4;
 }
 
-/* Player 1 hover & selection styles */
 .board.player-1 .block:not(.player-1):not(.player-2):hover {
     background-color: var(--text-yellow);
 }
@@ -191,7 +186,6 @@ body {
     background-image: var(--male-2);
 }
 
-/* Player 2 hover & selection styles */
 .board.player-2 .block:not(.player-1):not(.player-2):hover {
     background-color: #816df2;
 }
@@ -274,9 +268,9 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: rgba(54, 54, 54, 0.8);  /* Semi-transparent background */
+    background-color: rgba(54, 54, 54, 0.8); 
     padding: 10px 0;
     color: var(--text-light);
     font-size: 0.8rem;
-    z-index: 2;  /* Para garantir que apareça acima de outros elementos, mas abaixo da tela de seleção */
+    z-index: 2; 
 }

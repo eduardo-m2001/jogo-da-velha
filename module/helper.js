@@ -1,8 +1,6 @@
 
 import { GAME } from "./variables.js";
 
-/** Todas as funções auxiliares */
-
 export function Profile() {
     const playerSections = document.querySelectorAll(".player-selection");
     
@@ -12,36 +10,26 @@ export function Profile() {
                 const playerId = section.dataset.player;
                 const characterId = e.target.dataset.id;
 
-                // Check se a imagem selecionada pelo jogador 2 é a mesma do jogador 1 e vice-versa
                 if (playerId === '1' && GAME.players['2'] === characterId) return;
                 if (playerId === '2' && GAME.players['1'] === characterId) return;
 
                 GAME.players[playerId] = characterId;
 
-                // Atualize X_CLASS e Y_CLASS com base na seleção do jogador
                 if (playerId === '1') {
                     GAME.X_CLASS = characterId;
                 } else if (playerId === '2') {
                     GAME.Y_CLASS = characterId;
                 }
-
-                // Remova a seleção atual, se houver
+                
                 const currentSelected = section.querySelector(".selected");
                 if (currentSelected) {
                     currentSelected.classList.remove("selected");
                 }
 
-                // Marque a imagem selecionada
                 e.target.classList.add("selected");
             }
         });
     });
-}
-
-function removeImgSelection(img){
-    [].forEach.call(img, function(el){
-        el.classList.remove("selected");
-    })
 }
 
 export function setHoverEffect() {
