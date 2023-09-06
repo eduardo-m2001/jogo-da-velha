@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha - Eduardo Medeiros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="start-game">
+        <h1 class="text-light">Seleção de Personagem</h1>
+        
+        <!-- Área de seleção para o Jogador 1 -->
+        <div class="player-selection" data-player="1">
+            <h2 class="text-light">Jogador 1</h2>
+            <div class="profile">
+                <div class="img">
+                    <img src="./assets/f1.png" class="id" data-id="female-1" alt="">
+                    <img src="./assets/m1.png" class="id" data-id="male-1" alt="">
+                </div>
+                <div class="img">
+                    <img src="./assets/f2.png" class="id" data-id="female-2" alt="">
+                    <img src="./assets/m2.png" class="id" data-id="male-2" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Área de seleção para o Jogador 2 -->
+        <div class="player-selection" data-player="2">
+            <h2 class="text-light">Jogador 2</h2>
+            <div class="profile">
+                <div class="img">
+                    <img src="./assets/f1.png" class="id" data-id="female-1" alt="">
+                    <img src="./assets/m1.png" class="id" data-id="male-1" alt="">
+                </div>
+                <div class="img">
+                    <img src="./assets/f2.png" class="id" data-id="female-2" alt="">
+                    <img src="./assets/m2.png" class="id" data-id="male-2" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <button class="primary-btn" id="startBtn">Jogar</button>
+    </div>
+
+    <div class="container">
+        <div class="board" id="board">
+            <div class="block" data-cell></div>
+            <div class="block" data-cell></div>
+            <div class="block" data-cell></div>
+            <div class="block" data-cell></div>
+            <div class="block" data-cell></div>
+            <div class="block" data-cell></div>
+            <div class="block" data-cell></div>
+            <div class="block" data-cell></div>
+            <div class="block" data-cell></div>
+        </div>
+    </div>
+
+    <div class="draw-msg">
+        <div class="draw">
+            <h1 class="text-center text-yellow">Empate</h1>
+        </div>
+        <button id="drawBtn" class="primary-btn">Jogar Novamente</button>
+    </div>
+
+    <div class="winner-msg">
+        <h1 class="text-center text-yellow">Vencedor</h1>
+        <div class="winner"></div>
+        <button id="restartBtn" class="primary-btn">Recomeçar</button>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
