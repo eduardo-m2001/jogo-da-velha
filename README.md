@@ -27,6 +27,8 @@ ___
 ```bash
 $ git clone https://github.com/eduardo-m2001/jogo-da-velha
 ```
+
+[O resultado FINAL pode ser visto aqui](https://numbers-converter2023.netlify.app/)
 ___
 
 # 🤩 Diferenciais
